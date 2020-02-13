@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6AA6DE"
+    android:orientation="vertical">
+
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:id="@+id/linearLayout"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:visibility="visible">
+
+
+         <Button
+             android:id="@+id/createaccountbtn"
+             android:layout_width="319dp"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="144dp"
+             android:background="@drawable/roundbuttons"
+             android:fontFamily="sans-serif-black"
+             android:text="Create Account"
+             android:textColor="#66A6DE"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/email_phone_text" />
+
+         <EditText
+             android:id="@+id/f_name_text"
+             android:layout_width="319dp"
+             android:layout_height="50dp"
+             android:layout_marginTop="184dp"
+             android:background="@drawable/rounded_edit_text_signin_register"
+             android:ems="10"
+             android:hint="First name:"
+             android:inputType="textPersonName"
+             android:paddingLeft="16dp"
+             android:textColorHint="#FFFFFF"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent" />
+
+         <EditText
+             android:id="@+id/l_name_text"
+             android:layout_width="319dp"
+             android:layout_height="50dp"
+             android:layout_marginTop="248dp"
+             android:background="@drawable/rounded_edit_text_signin_register"
+             android:ems="10"
+             android:hint="Last name:"
+             android:inputType="textPersonName"
+             android:paddingLeft="16dp"
+             android:textColorHint="#FFFFFF"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent" />
+
+         <EditText
+             android:id="@+id/email_phone_text"
+             android:layout_width="319dp"
+             android:layout_height="50dp"
+             android:layout_marginTop="316dp"
+             android:background="@drawable/rounded_edit_text_signin_register"
+             android:ems="10"
+             android:hint="Email or Phone:"
+             android:inputType="textPersonName"
+             android:paddingLeft="16dp"
+             android:textColorHint="#FFFFFF"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent" />
+
+         <EditText
+             android:id="@+id/password_text"
+             android:layout_width="319dp"
+             android:layout_height="50dp"
+             android:layout_marginTop="388dp"
+             android:background="@drawable/rounded_edit_text_signin_register"
+             android:ems="10"
+             android:hint="Password:"
+             android:inputType="textPersonName"
+             android:paddingLeft="16dp"
+             android:textColorHint="#FFFFFF"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent" />
+
+         <TextView
+             android:id="@+id/textView"
+             android:layout_width="174dp"
+             android:layout_height="46dp"
+             android:layout_marginTop="96dp"
+             android:text="Register Page"
+             android:textColor="#FFFFFF"
+             android:textSize="25dp"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent" />
+     </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
