@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".QR_Scanner">
 
-    <ImageView
-        android:id="@+id/photoimageView"
+    <io.fotoapparat.view.CameraView
+        android:id="@+id/camera_view"
         android:layout_width="364dp"
         android:layout_height="498dp"
         android:contentDescription="Displaying Image"
@@ -26,7 +26,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/photoimageView"
+        app:layout_constraintTop_toBottomOf="@+id/camera_view"
         tools:text="Start Camera App" />
     <uses-feature android:name="android.hardware.camera" android:required="true" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
