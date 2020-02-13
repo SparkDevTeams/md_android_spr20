@@ -2,6 +2,8 @@ package com.example.tendee
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.widget.Toolbar
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -9,7 +11,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Toolbar toolbar = findViewById(R.id.toolbar)
+        val toolbar = findViewById(R.id.toolbar) as Toolbar
+        setSupportActionBar(toolbar)
     }
 
 
