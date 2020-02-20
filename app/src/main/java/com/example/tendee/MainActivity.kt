@@ -1,59 +1,39 @@
 package com.example.tendee
 
-import android.Manifest
-import android.content.pm.PackageManager
+import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
-import io.fotoapparat.Fotoapparat
-import io.fotoapparat.log.logcat
-import io.fotoapparat.log.loggers
-import io.fotoapparat.parameter.ScaleType
-import io.fotoapparat.selector.back
-import io.fotoapparat.view.CameraView
+import android.os.Bundle
+import android.widget.Toast
+import com.google.zxing.integration.android.IntentIntegrator
+import kotlinx.android.synthetic.main.activity_qr__scanner.*
 
 class MainActivity : AppCompatActivity() {
 
-    val CAMERA_REQUEST_CODE = 0;
-    val permissions = arrayOf(android.Manifest.permission.CAMERA, android.Manifest.permission.WRITE_EXTERNAL_STORAGE, android.Manifest.permission.READ_EXTERNAL_STORAGE)
-    var fotoapparat: Fotoapparat? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-    private fun hasNoPermissions(): Boolean{
-        return ContextCompat.checkSelfPermission(this,
-            Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED || ContextCompat.checkSelfPermission(this,
-            Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED || ContextCompat.checkSelfPermission(this,
-            Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED
+        btn_scan.setOnClickListener {
+            val scanner = IntentIntegrator(this)
+            scanner.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE)
+            scanner.setBeepEnabled(false)
+            scanner.initiateScan()
+        }
     }
 
-    fun requestPermission(){
-        ActivityCompat.requestPermissions(this, permissions,0)
-    }
-
-    private fun createFotoapparat(){
-        val cameraView = findViewById<CameraView>(R.id.camera_view)
-
-        fotoapparat = Fotoapparat(
-            context = this,
-            view = cameraView,
-            scaleType = ScaleType.CenterCrop,
-            lensPosition = back(),
-            logger = loggers(
-                logcat()
-            )
-        )
-    }
-
-    override fun onStop() {
-        super.onStop()
-        fotoapparat?.stop()
-    }
-
-    override fun onStart() {
-        super.onStart()
-        if (hasNoPermissions()) {
-            requestPermission()
-        }else{
-            fotoapparat?.start()
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if(resultCode == Activity.RESULT_OK){
+            val result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
+            if(result != null) {
+                if(result.getContents() == null) {
+                    Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(this, "Scanned: " + result.getContents(), Toast.LENGTH_LONG).show()
+                }
+            } else {
+                super.onActivityResult(requestCode, resultCode, data)
+            }
         }
     }
 }
