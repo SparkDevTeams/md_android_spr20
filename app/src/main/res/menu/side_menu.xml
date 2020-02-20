@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_action_profile"
+            android:title="Profile"/>
+        <item
+            android:id="@+id/nav_messages"
+            android:icon="@drawable/ic_action_msg"
+            android:title="Messages"/>
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/ic_action_history"
+            android:title="Event History"/>
+    </group>
+
+
+    <item android:title="Account Settings">
+        <menu>
+            <item
+                android:id="@+id/nav_update"
+                android:icon="@drawable/ic_action_profile"
+                android:title="Update Profile"/>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_action_signout"
+                android:title="Sign Out"/>
+        </menu>
+    </item>
+</menu>
