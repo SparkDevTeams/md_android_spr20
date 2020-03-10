@@ -21,14 +21,13 @@
     </com.google.android.material.appbar.AppBarLayout>
 
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="This is my content area."/>
-    </LinearLayout>
+        android:id="@+id/Recycler">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
 
 </LinearLayout>

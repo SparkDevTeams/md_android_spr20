@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "598126071003",
+    "firebase_url": "https://tendee-9f898.firebaseio.com",
+    "project_id": "tendee-9f898",
+    "storage_bucket": "tendee-9f898.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:598126071003:android:7d55577f7016bb43b610fe",
+        "android_client_info": {
+          "package_name": "com.example.tendee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "598126071003-1r2bffhuh6tp1pk7l9qam2l4thoeoihe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALwutHv8m7pk_maOhnwLeBIBlT0Q-yoDM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "598126071003-1r2bffhuh6tp1pk7l9qam2l4thoeoihe.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "598126071003-r2tnanb0pb2h7c5ulnhvv1bp9mun625b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.SparkDev.Tendee"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
