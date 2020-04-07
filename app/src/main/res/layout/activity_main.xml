@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6AA6DE">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraint_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
+    android:background="#6AA6DE"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/TitleView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tendee"
+        android:text="Tendee2"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -82,20 +77,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/optiontext" />
 
-        <Button
-            android:id="@+id/signinbtn2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:background="@drawable/roundbuttons"
-            android:text="F"
-            android:textColor="#66A6DE"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.801"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/optiontext" />
+    <Button
+        android:id="@+id/signinbtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/roundbuttons"
+        android:text="F"
+        android:textColor="#66A6DE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.798"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optiontext" />
 
-        <TextView
+    <TextView
         android:id="@+id/newuser_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -132,4 +127,3 @@
         app:layout_constraintTop_toBottomOf="@+id/signin_btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>

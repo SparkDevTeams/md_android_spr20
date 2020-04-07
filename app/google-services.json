@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1051836930228",
+    "firebase_url": "https://tendee-97ac6.firebaseio.com",
+    "project_id": "tendee-97ac6",
+    "storage_bucket": "tendee-97ac6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1051836930228:android:51450c1b994fe888969fe1",
+        "android_client_info": {
+          "package_name": "com.example.tendee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1051836930228-4cu0q46eurmqklqm2o9l1u8tqeeecbg2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tendee",
+            "certificate_hash": "b2b727fb054a0cbe12476b573135450a8da3fddd"
+          }
+        },
+        {
+          "client_id": "1051836930228-damhr52ulotda2issbe5avdg23hslmt7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAH90yMOpbSo33pfL69LCSfEk0rzCOtGm0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1051836930228-damhr52ulotda2issbe5avdg23hslmt7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
