@@ -69,7 +69,7 @@ class SignUpAccount : AppCompatActivity() {
                     user?.sendEmailVerification()
                         ?.addOnCompleteListener { tasks ->
                             if (tasks.isSuccessful) {
-                                startActivity(Intent(this, MainActivity::class.java))
+                                startActivity(Intent(this, LoginActivity::class.java))
                                 finish()
                             } else {
                                 Toast.makeText(
