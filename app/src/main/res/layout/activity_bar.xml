@@ -14,20 +14,102 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/blue"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 
-
-    <androidx.recyclerview.widget.RecyclerView
+    <RelativeLayout
+        android:layout_margin="12dp"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/Recycler">
+        android:background="#CBCBCD"
+        >
 
-    </androidx.recyclerview.widget.RecyclerView>
+        <ImageView
+            android:id="@+id/BannerImage"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:paddingBottom="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/python"
+            />
+
+        <TextView
+            android:id="@+id/EventName"
+            android:paddingLeft="8dp"
+            android:paddingBottom="4dp"
+            android:text="Python Workshop"
+            android:textSize="20dp"
+            android:layout_below="@+id/BannerImage"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            />
+
+        <TextView
+            android:id="@+id/EventDesc"
+            android:paddingLeft="8dp"
+            android:paddingBottom="4dp"
+            android:text="Introduction to Python3"
+            android:textSize="16dp"
+            android:layout_below="@+id/EventName"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_margin="12dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="#CBCBCD"
+        >
+
+        <ImageView
+            android:id="@+id/BannerImage2"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:paddingBottom="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/spark"
+            />
+
+        <TextView
+            android:id="@+id/EventName2"
+            android:paddingLeft="8dp"
+            android:paddingBottom="4dp"
+            android:text="SparkDev Mobile Development"
+            android:textSize="20dp"
+            android:layout_below="@+id/BannerImage2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            />
+
+        <TextView
+            android:id="@+id/EventDesc2"
+            android:paddingLeft="8dp"
+            android:paddingBottom="4dp"
+            android:text="Mobile Development Meeting"
+            android:textSize="16dp"
+            android:layout_below="@+id/EventName2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            />
+
+
+    </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/Recycler">
+
+        </androidx.recyclerview.widget.RecyclerView>
 
 
 
-</LinearLayout>
+    </LinearLayout>
